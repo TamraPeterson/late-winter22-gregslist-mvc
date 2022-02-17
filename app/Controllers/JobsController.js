@@ -10,7 +10,6 @@ function _draw() {
 }
 export class JobsController {
   constructor() {
-    console.log('jobscontroller triggered')
     ProxyState.on('jobs', _draw)
   }
 
@@ -22,7 +21,6 @@ export class JobsController {
   createJob(event) {
     event.preventDefault()
     let form = event.target
-    console.log('create job triggered', form);
     let newJob = {
       jobTitle: form.jobTitle.value,
       duties: form.duties.value,

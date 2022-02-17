@@ -12,7 +12,7 @@ const testCar = new Car(
     price: 5600,
     description: 'its cool.',
     color: '#FFFFFF',
-    imgUrl: 'https://thiscatdoesnotexist.com'
+    imgUrl: 'https://hips.hearstapps.com/hmg-prod/amv-prod-cad-assets/images/media/672264/2018-gmc-sierra-1500-in-depth-model-review-car-and-driver-photo-693479-s-original.jpg?crop=0.670xw:0.827xh;0.258xw,0.0682xh&resize=640:*'
   }
 )
 
@@ -39,7 +39,6 @@ const testJob = new Job(
 )
 
 class AppState extends EventEmitter {
-
   // NOTE just adds intellisense to our cars array that lets our code know its an array of cars, not other things 
   /** @type {import('./Models/Car').Car[]} */
   cars = [testCar]
