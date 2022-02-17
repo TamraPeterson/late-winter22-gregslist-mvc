@@ -1,23 +1,50 @@
 import { Car } from "./Models/Car.js"
+import { House } from "./Models/House.js"
+import { Job } from "./Models/Job.js"
 import { EventEmitter } from "./Utils/EventEmitter.js"
 import { isValidProp } from "./Utils/isValidProp.js"
 
 const testCar = new Car(
   {
-    make:'GMC', 
-    model:'Sierra', 
-    year:2018, 
-    price:5600, 
+    make: 'GMC',
+    model: 'Sierra',
+    year: 2018,
+    price: 5600,
     description: 'its cool.',
-    color:'#FFFFFF', 
-    imgUrl:'https://thiscatdoesnotexist.com'
-  })
+    color: '#FFFFFF',
+    imgUrl: 'https://thiscatdoesnotexist.com'
+  }
+)
+
+const testHouse = new House(
+  {
+    bedrooms: 3,
+    bathrooms: 2,
+    year: 2015,
+    sqfootage: 1500,
+    price: 150000,
+    imgUrl: 'https://i1.wp.com/movingtips.wpengine.com/wp-content/uploads/2020/07/starter-home.jpg?fit=1025%2C684&ssl=1'
+  }
+)
+
+const testJob = new Job(
+  {
+    jobTitle: 'Software Developer',
+    duties: 'Develop Software',
+    hours: 'Full Time',
+    salary: 100,
+    imgUrl: 'https://s3-us-east-2.amazonaws.com/maryville/wp-content/uploads/2020/01/20133422/software-developer-coding.jpg'
+
+  }
+)
 
 class AppState extends EventEmitter {
-  
+
   // NOTE just adds intellisense to our cars array that lets our code know its an array of cars, not other things 
   /** @type {import('./Models/Car').Car[]} */
-  cars =[testCar]
+  cars = [testCar]
+  houses = [testHouse]
+  jobs = [testJob]
 }
 
 
